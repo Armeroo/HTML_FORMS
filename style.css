@@ -30,13 +30,13 @@ body {
 
 .speaker-form-header h1 {
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .speaker-form {
     background-color: #F6F7F8;
     border:  1px solid #D6D9DC;
-    border-radius: 5px;
+    border-radius: 0px;
 
     width: 80%;
     padding: 50px;
@@ -49,7 +49,7 @@ body {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: wrap;   
 }
 
 .form-row input [type= 'text'],
@@ -67,6 +67,59 @@ body {
 .form-row label {
     margin-bottom: 15px;
 }
+
+.form-row select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    }
+    
+.form-row textarea {
+        font-family: "Helvetica", "Arial", sans-serif; font-size: 14px;
+        border: 1px solid #D6D9DC; border-radius: 3px;
+        min-height: 200px; margin-bottom: 10px; padding: 7px;
+        resize: none;
+        }
+
+.form-row .instructions {
+        color: #999999; font-size: 14px;
+        margin-bottom: 30px; 
+        }
+
+.form-row .checkbox-label { margin-bottom: 0;
+        }
+
+.form-row input[type='text']:invalid,
+.form-row input[type='email']:invalid {
+    border: 1px solid #D55C5F;
+    color: #ffffff;
+    background-color: #D55C5F;
+    box-shadow: none;
+}
+
+.legacy-form-row {
+            border: none;
+            margin-bottom: 40px;
+        }
+        
+.legacy-form-row legend {
+            margin-bottom: 15px;
+        }
+        
+.legacy-form-row .radio- label {
+            display: block;
+            font-size: 14px;
+            padding: 0 20px 0 10px;
+        }
+        
+.legacy-form-row input [input='radio'] {
+            margin-top: 2px;
+        }
+        
+.legacy-form-row .radio-label,
+.legacy-form-row input [input='radio'] {
+            float: left;
+        }
 
 @media only screen and (min-width: 700px) {
     .speaker-form-header,
@@ -91,15 +144,27 @@ body {
     .form-row label {
         text-align: right;
         width: 120px;
+        margin-top: 7px;
         padding-right: 20px;
     }
-}
 
-.form-row input[type='text']:invalid,
-.form-row input[type='email']:invalid {
-    border: 1px solid #D55C5F;
-    color: #ffffff;
-    background-color: #D55C5F;
-    
-    box-shadow: none;
+    .form-row .instructions {
+        margin-left: 120px; 
+    }
+
+    .form-row .checkbox-label { 
+        margin-left: 120px; width: auto;
+    }
+
+    .legacy-form-row {
+        margin-bottom: 10px;
+    }
+    .legacy-form-row legend {
+        width: 120px;
+        text-align: right;
+        padding-right: 20px;
+    }
+    .legacy-form-row legend {
+        float: left;
+    }
 }
